@@ -36,16 +36,16 @@ public final class AIFactory {
 
   private static final Random RANDOM = new Random();
 
-  // FightAI Parameters: lol
+  // FightAI Parameters:           lol
   // CollideAI
-  private static final float RUSH_RANGE_LOW = 0.5f;
-  private static final float RUSH_RANGE_HIGH = 2.0f;
+  private static final float             RUSH_RANGE_LOW = 0.5f;
+  private static final float RUSH_RANGE_HIGH             = 2.0f;
 
-  /** Cool down for the fireball skill that the monster uses (in milliseconds). */
-  public static final int FIREBALL_COOL_DOWN = 750;
+  /** Cool down for the fireball skill that the monster                uses (in milliseconds). */
+  public static final int FIREBALL_COOL_DOWN         = 750;
 
   // RangeAI
-  private static final float ATTACK_RANGE_LOW = 2.1f;
+  private static final               float ATTACK_RANGE_LOW = 2.1f;
   private static final float ATTACK_RANGE_HIGH = 8f;
   private static final float DISTANCE_LOW = 1f;
   private static final float DISTANCE_HIGH = 2f;
