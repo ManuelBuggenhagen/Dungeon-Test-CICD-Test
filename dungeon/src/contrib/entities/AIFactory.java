@@ -32,8 +32,9 @@ import java.util.stream.Stream;
  * <p>Use {@link #randomFightAI()}, {@link #randomIdleAI()}, {@link #randomTransition} to generate
  * the behavior logics separately.
  */
+// another tottaly new feature here!!
 public final class AIFactory {
-
+// I am adding a lot of useful stuff here!
   private static final Random RANDOM = new Random();
 
   // FightAI Parameters:
