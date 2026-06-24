@@ -7,18 +7,13 @@ on:
             - 'contrib/**'
 
 jobs:
-    build-test-format:
-        name: Build, Test, spotless
+    build-test-check:
+        name: Build, Test , spotless
         runs-on: ubuntu-latest
-
-        permissions:
-            contents: write
 
         steps:
             - name: Checkout Repository
               uses: actions/checkout@v4
-              with:
-                  ref: ${{ github.head_ref }}
 
             - name: Set up JDK 25
               uses: actions/setup-java@v4
@@ -27,14 +22,8 @@ jobs:
                   distribution: 'temurin'
                   cache: 'gradle'
 
-            - name: Automatische Spotless-Formatierung anwenden
-              run: ./gradlew :dungeon:spotlessApply
+            - name: 1. Spotless Formatierungs-Check
+              run: ./gradlew :dungeon:spotlessCheck
 
-            - name: Formatierung in den Pull Request pushen
-              uses: stefanzweifel/git-auto-commit-action@v5
-              with:
-                  commit_message: "Automatische Spotless-Formatierung"
-                  commit_user_name: "GitHub Actions Bot"
-
-            - name: Build und Test (Dungeon)
+            - name: 2. Build und Test (Nur Dungeon)
               run: ./gradlew :dungeon:assemble :dungeon:test
