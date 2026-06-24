@@ -1,8 +1,7 @@
 name: Apply Spotless on PR
 
 on:
-    pull_request_target:
-        types: [ labeled ]
+    workflow_dispatch:
 
 jobs:
     apply-spotless:
