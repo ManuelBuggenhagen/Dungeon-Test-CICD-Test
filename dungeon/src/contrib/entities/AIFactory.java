@@ -36,7 +36,7 @@ public final class AIFactory {
 
   private static final Random RANDOM = new Random();
 
-  // FightAI Parameters:
+  // FightAI Parameters: lol
   // CollideAI
   private static final float RUSH_RANGE_LOW = 0.5f;
   private static final float RUSH_RANGE_HIGH = 2.0f;

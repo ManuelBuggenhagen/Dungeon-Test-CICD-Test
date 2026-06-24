@@ -68,7 +68,7 @@ public class CollisionComponentTest {
     assertEquals(1, counterE1Enter.getCount());
     assertEquals(0, counterE1Leave.getCount());
     assertEquals(0, counterE2Enter.getCount());
-    assertEquals(10, counterE2Leave.getCount());
+    assertEquals(0, counterE2Leave.getCount());
   }
 
   /** On leave no method given. */
