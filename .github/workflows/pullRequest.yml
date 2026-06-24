@@ -1,4 +1,4 @@
-name: Feature Integration
+name: Pull Request
 
 on:
     pull_request:
@@ -8,7 +8,7 @@ on:
 
 jobs:
     build-test-format:
-        name: Build, Test & Auto-Format
+        name: Build, Test, spotless
         runs-on: ubuntu-latest
 
         permissions:
@@ -36,5 +36,5 @@ jobs:
                   commit_message: "Automatische Spotless-Formatierung"
                   commit_user_name: "GitHub Actions Bot"
 
-            - name: Build und Test (Nur Dungeon)
+            - name: Build und Test (Dungeon)
               run: ./gradlew :dungeon:assemble :dungeon:test
